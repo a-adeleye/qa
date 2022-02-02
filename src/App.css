@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --default-color: blueviolet;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* .App {
+  width: 600px;
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 65px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: var(--default-color);
+  color: white;
+  padding: 20px 48px;
+}
+
+.logo {
+  height: 100%;
+  margin-right: 6px;
+}
+
+.current-page {
+  font-size: 1.25rem;
+  margin-right: auto;
+}
+
+.project-title {
+  font-size: 0.75rem;
+}
+
+.auditForm {
+  width: 70%;
+  margin: 1.25em;
+  padding-right: 1em;
+  display: flex;
+  gap: 1em;
+  max-height: 80vh;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  align-items: center;
+}
+
+form::-webkit-scrollbar {
+  display: none;
+}
+
+fieldset {
+  width: max-content;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5em;
+  border-radius: 8px;
+  padding: 1.2em;
+  border: 1px solid var(--default-color);
+}
+
+legend {
+  background-color: var(--default-color);
+  color: white;
+  padding: 0.3em 1em;
+  border-radius: 0.5em;
+}
+
+.fieldset--level {
+  width: 100%;
+}
+
+.fieldset--level--value {
+  font-weight: 700;
+}
+
+input,
+select {
+  padding: 0.3em;
+  border-radius: 0.4em;
+  text-indent: 5px;
+  border: 1px solid var(--default-color);
+}
+
+select {
+  background-color: var(--default-color);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* 
+input {
+  text-indent: 5px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+button {
+  grid-column: 1 / -1;
+  background-color: blueviolet;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  transform: scale(1.02);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+main {
+  padding: 36px;
+}
+
+.meme-image {
+  border: 1px solid grey;
+  margin-top: 17px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.top-text {
+  top: 4%;
+}
+
+.meme-image h1 {
+  position: absolute;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #000000;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+}
+
+.bottom-text {
+  bottom: 4%;
+} */
+
+/* .form {
+  padding: 17px;
+}
+input,
+.ododo {
+  width: 50%;
+  padding: 17px;
+  margin-top: 17px;
+  display: block;
+}
+
+li {
+  padding: 5px 17px;
+  font-size: 2em;
+}
+
+ol {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+span {
+  margin-left: 100px;
+  cursor: pointer;
+  background-color: aqua;
+  padding: 1px 20px;
+} */
+
+@media only screen and (max-width: 1200px) {
+  .auditForm {
+    flex-wrap: wrap;
   }
-  to {
-    transform: rotate(360deg);
+
+  fieldset {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  select {
+    width: 100%;
+    text-align: center;
   }
 }
