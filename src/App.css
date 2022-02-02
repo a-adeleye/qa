@@ -18,7 +18,7 @@ header {
   align-items: center;
   background-color: var(--default-color);
   color: white;
-  padding: 20px 48px;
+  padding: 20px 20px;
 }
 
 .logo {
@@ -36,10 +36,11 @@ header {
 }
 
 .auditForm {
-  width: 70%;
+  width: 90%;
   margin: 1.25em;
   padding-right: 1em;
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
   max-height: 80vh;
   overflow: auto;
@@ -80,7 +81,7 @@ legend {
 input,
 select {
   padding: 0.3em;
-  border-radius: 0.4em;
+  /* border-radius: 0.4em; */
   text-indent: 5px;
   border: 1px solid var(--default-color);
 }
@@ -90,6 +91,39 @@ select {
   color: white;
   cursor: pointer;
   width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--default-color);
+}
+
+.auditCategories {
+  width: max-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5em;
+  border-radius: 8px;
+  padding: 1.2em;
+  border: 1px solid var(--default-color);
+}
+
+.parameter {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 0.5em;
+}
+
+.parameter-name {
+  background-color: var(--default-color);
+  color: white;
+  padding: 0.2em 0.3em;
+  margin-bottom: 0.3em;
+  border-radius: 0.3em;
+}
+
+.ratings-value {
+  padding: 0.38em 0.2em;
+  margin-bottom: 0.38em;
+  background-color: white;
+  color: black;
 }
 
 /* 
