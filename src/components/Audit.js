@@ -9,12 +9,12 @@ function Audit(props) {
       <legend>{sheet.category}</legend>
 
       {sheet.parameters.map((param) => (
-        <div className="parameter">
+        <div className="parameter"  key={uniqid()}>
           <p className="parameter-name">{param.parameter}</p>
 
           <select className="ratings-value">
             {param.ratings.map((rating) => (
-              <option>{rating}</option>
+              <option key={uniqid()}>{rating}</option>
             ))}
           </select>
           
