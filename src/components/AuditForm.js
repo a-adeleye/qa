@@ -8,8 +8,12 @@ import AUDITCATEGORIES from "./AuditCategories";
 
 
 function AuditForm() {
-  function handleSubmit() {
-    console.log("formData");
+
+  const [audit, setAudit] = React.useState({})
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log(audit)
   }
 
   return (
@@ -17,6 +21,7 @@ function AuditForm() {
       <AgentDetails />
       <AuditDetails />
       <Audit auditSheet={AUDITCATEGORIES}/>
+      <button className="saveAuditBtn">Save Audit</button>
     </form>
   );
 }

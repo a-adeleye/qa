@@ -50,16 +50,20 @@ header {
   height: 10em;
 }
 
+.presets:hover .default {
+  display: none;
+}
+
 .default,
 .silver,
 .blue,
 .orange,
 .pink,
-.violet {
+.violet,
+.picker {
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
-  border: 0.8px solid #fff2f1;
   margin-right: 0.4em;
   cursor: pointer;
 }
@@ -181,6 +185,19 @@ select {
   margin-bottom: 0.38em;
   background-color: white;
   color: black;
+}
+
+.saveAuditBtn {
+  padding: 1em 3em;
+  cursor: pointer;
+  background-color: var(--default-color);
+  border: none;
+  border-radius: 1em;
+  color: #ffffff;
+}
+
+.saveAuditBtn:hover {
+  transform: scale(0.9);
 }
 
 /* 
