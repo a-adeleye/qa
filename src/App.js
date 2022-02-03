@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import Header from "./components/Header";
 import AuditForm from "./components/AuditForm";
+import Presets from "./components/Presets";
 
 
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <AuditForm />
+      <Presets />
     </div>
   );
 }
